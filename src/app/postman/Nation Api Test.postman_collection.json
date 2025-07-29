@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "05f452cc-7869-4c7e-82e6-ca7f36e84e4a",
+		"name": "Nation Api Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47095402"
+	},
+	"item": [
+		{
+			"name": "Get All Countries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4200/api/countries",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4200",
+					"path": [
+						"api",
+						"countries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Languages by Country ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4200/api/countries/1/languages",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4200",
+					"path": [
+						"api",
+						"countries",
+						"1",
+						"languages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Max GDP per Population",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4200/api/countries/max-gdp-per-pop\n",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4200",
+					"path": [
+						"api",
+						"countries",
+						"max-gdp-per-pop\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Country Stats (filtered)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4200/api/stats?regionId=1&dateFrom=1990&dateTo=2000&page=0&size=20\n",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4200",
+					"path": [
+						"api",
+						"stats"
+					],
+					"query": [
+						{
+							"key": "regionId",
+							"value": "1"
+						},
+						{
+							"key": "dateFrom",
+							"value": "1990"
+						},
+						{
+							"key": "dateTo",
+							"value": "2000"
+						},
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "20\n"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,11 @@
+<h2>All Countries</h2>
+
+<div *ngIf="loading">Loading countries...</div>
+
+<ul *ngIf="!loading">
+  <li *ngFor="let country of countries">
+    <button (click)="goToLanguages(country.countryId)">
+      {{ country.name }} ({{ country.countryCode2 }})
+    </button>
+  </li>
+</ul>

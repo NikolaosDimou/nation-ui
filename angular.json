@@ -16,25 +16,21 @@
       "architect": {
         "build": {
           "builder": "@angular/build:application",
-          "options": {
-            "browser": "src/main.ts",
-            "tsConfig": "tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
-            "server": "src/main.server.ts",
-            "outputMode": "server",
-            "ssr": {
-              "entry": "src/server.ts"
-            }
-          },
+            "options": {
+              "outputPath": "dist/nation-ui",
+              "index": "src/index.html",
+              "browser": "src/main.ts",
+              "tsConfig": "tsconfig.app.json",
+              "inlineStyleLanguage": "scss",
+              "assets": [
+                        "src/favicon.ico",
+                         "src/assets"
+                        ],
+                "styles": [
+                          "src/styles.scss"
+                       ],
+                "scripts": []
+                    },
           "configurations": {
             "production": {
               "budgets": [
