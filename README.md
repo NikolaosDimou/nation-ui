@@ -1,59 +1,74 @@
-# NationUi
+# 🌍 Nation UI - Angular Application
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.3.
+This is the frontend Angular application for the Nation Data Case Study. It consumes data from the Spring Boot REST API and visualizes:
 
-## Development server
+- ✅ A list of countries with navigation to their spoken languages
+- ✅ A table of countries with their max GDP-to-population ratio
+- ✅ A filterable table by region and year for population and GDP
 
-To start a local development server, run:
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── app/
+│   ├── core/                # Models and shared services
+│   ├── country-details/     # Shows languages per country
+│   └── features/
+│       ├── home/            # Home screen & nav
+│       ├── list/            # List of countries
+│       ├── ratios/          # GDP/Population ratio table
+│       └── stats/           # Table with region & year filters
+```
+
+---
+
+## 🚀 Getting Started
+
+### ✅ Prerequisites
+
+- Node.js `v18+`
+- Angular CLI: `npm install -g @angular/cli`
+- Backend API running at `http://localhost:8080`
+
+### 📦 Install Dependencies
+
+```bash
+npm install
+```
+
+### ▶️ Run the Application
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Then open [http://localhost:4200](http://localhost:4200)
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🌐 Routing Overview
 
-```bash
-ng generate component component-name
-```
+| Path                        | Description                                  |
+|-----------------------------|----------------------------------------------|
+| `/`                         | Home page with navigation                    |
+| `/countries`               | Ordered list of countries                    |
+| `/countries/:id/languages` | Languages spoken in a selected country       |
+| `/ratios`                 | Countries with highest GDP/population ratio |
+| `/stats`                  | Full table with filters for region and year |
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 🛠 Technologies Used
 
-## Building
+- Angular 17 (standalone components)
+- TypeScript
+- Angular Router
+- SCSS
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## 📄 License
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+For educational and demonstration purposes.
